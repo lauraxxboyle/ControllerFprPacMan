@@ -20,6 +20,9 @@ while True:
         continue  # Skip if accelerometer failed to initialize
 
     x, y, _ = sensor.accelerometer.acceleration
+    sensor.advanced_control_feedback(y)
+
+
 
     direction = None
     key = None
@@ -50,4 +53,10 @@ while True:
     elif direction is None:
         last_direction = None
 
-    time.sleep(0.1) 
+        
+
+
+
+    time.sleep(0.1)
+
+
