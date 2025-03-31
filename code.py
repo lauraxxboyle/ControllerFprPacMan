@@ -44,19 +44,19 @@ while True:
     # Show direction feedback using your class
     sensor.light(DIRECTION_COLOR)
 
-    # Only send key if direction changed
-    if direction and direction != last_direction:
+    # Press and hold while tilted
+    if direction:
         keyboard.press(key)
-        time.sleep(0.1)
+    else:
         keyboard.release_all()
-        last_direction = direction
-    elif direction is None:
-        last_direction = None
+
 
         
 
 
 
-    time.sleep(0.1)
+    time.sleep(0.02)
+
+
 
 
